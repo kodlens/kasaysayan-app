@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router";
 import VintagePaper from "@/components/custom/VIntagePaper";
+import Footer from "@/components/custom/Footer";
 
 
 export default function KasaysayanPage() {
@@ -105,11 +106,8 @@ export default function KasaysayanPage() {
           </Card>
         </VintagePaper>
 
-        <footer className="mt-12 text-center text-xs text-stone-600">
-          <p>
-            Ginawa para sa proyekto <span className="font-serif">Kasaysayan</span>.
-          </p>
-        </footer>
+        <Footer />
+        
       </div>
     </div>
   );

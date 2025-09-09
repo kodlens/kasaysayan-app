@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router";
+import Footer from "@/components/custom/Footer";
 
 // -------------------------------------------------------------
 // Kasaysayan ng Simbahan ng Cavinti — Nostalgic, single-file app
@@ -257,12 +258,8 @@ export default function SimbahanPage() {
           </div>
         </VintagePaper>
 
-        <footer className="mt-10 text-center text-xs text-stone-600">
-          <p>
-            Ginawa para sa proyekto <span className="font-serif">Kasaysayan</span> — isang nostalgic na
-            presentasyon ng lokal na pamana.
-          </p>
-        </footer>
+        <Footer />
+
       </div>
     </div>
   );
