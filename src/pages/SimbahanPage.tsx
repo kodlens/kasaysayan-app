@@ -217,7 +217,11 @@ export default function SimbahanPage() {
               <p key={i}>{p}</p>
             ))}
           </div>
+          <img src="/images/simbahan1.png" alt="Simbahan" width={400} className="mx-auto my-4"/>
+          
+          <hr className="mb-4 border-stone-300/60" />
 
+         
           <SectionHeading icon={Clock} title="Talatuntunan ng Mahahalagang Pangyayari" subtitle="1684–Ika-20 Siglo" />
 
           <Card className="bg-amber-50/60 border-stone-400/40">
