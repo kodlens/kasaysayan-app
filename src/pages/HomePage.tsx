@@ -112,32 +112,11 @@ export default function HomePage() {
           <img src="/images/leaves-left.png" width={200} alt="" />
         </div> */}
 
-        <div className="absolute bottom-0 z-20" style={{
-          backgroundImage: 'url(/images/leaves-left.png)',
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: "center",
-          height: '500px',
-          width: '370px',
-        }}>
-        </div>
-        <div className="mx-auto z-0" style={{
-          backgroundImage: 'url(/images/book-opened.png)',
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: "center",
-          height: '220px',
-          width: '600px',
-        }}>
-        </div>
+        <div className="absolute bottom-0 z-20 leaves"></div>
 
-        <div className="absolute bottom-0 right-0" style={{
-          backgroundImage: 'url(/images/book-pile.png)',
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          height: '400px',
-          width: '170px',
-        }}></div>
+        <div className="book"></div>
+
+        <div className="absolute bottom-0 right-0 book-pile"></div>
 
       </div>
 
