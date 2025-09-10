@@ -1,5 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 import { Landmark } from "lucide-react";
+import { Link } from "react-router";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -51,9 +52,9 @@ export default function HomePage() {
                 <div>
                   <img src="/images/menus/writing-paper.png" width={50} alt="paper-writing" />
                 </div>
-                <button className="btn-navigator">
+                <Link to={'/kasaysayan-pinagmulan'} className="btn-navigator">
                   KASAYSAYAN AT PINAGMULAN
-                </button>
+                </Link>
               </motion.div>
 
               <motion.div variants={itemVariants} className="flex gap-4">
