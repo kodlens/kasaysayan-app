@@ -1,35 +1,20 @@
-import { motion } from "framer-motion";
-import { Landmark, BookOpenText, ArrowRight } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import VintagePaper from "@/components/custom/VIntagePaper";
-import Footer from "@/components/custom/Footer";
+import { motion, type Variants } from "framer-motion";
+import { Landmark } from "lucide-react";
 
-// -------------------------------------------------------------
-// Homepage / Index for Kasaysayan — Nostalgic theme
-// -------------------------------------------------------------
-
-const features = [
-  {
-    icon: BookOpenText,
-    title: "Kasaysayan",
-    desc: "Basahin ang mga piling sanaysay at dokumento tungkol sa kasaysayan ng Cavinti.",
-    href: "/kasaysayan",
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, // delay between each child
+    },
   },
-  {
-    icon: Landmark,
-    title: "Simbahan",
-    desc: "Alamin ang pinagmulan at mahahalagang kaganapan sa Parokya ng Pagbabagong Anyo.",
-    href: "/simbahan",
-  }
-  
-  // {
-  //   icon: History,
-  //   title: "Talatuntunan",
-  //   desc: "Siyasatin ang mga pangyayari sa pamamagitan ng timeline at tala.",
-  //   href: "/timeline",
-  // },
-];
+};
+
+const itemVariants:Variants = {
+  hidden: { opacity: 0, x: -50 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 
 
 export default function HomePage() {
@@ -54,113 +39,101 @@ export default function HomePage() {
         </motion.header>
 
         <div className="">
-          <div className="flex flex-col gap-4 items-center">
-            <div className="flex gap-4">
+          <motion.div
+            className="flex flex-col gap-4 items-center"
+            variants={containerVariants}
+            initial="hidden"
+            animate="show"
+            >
+            <motion.div variants={itemVariants} className="flex gap-4">
               <div>
                 <img src="/images/menus/writing-paper.png" width={50} alt="paper-writing" />
               </div>
               <button className="btn-navigator">
                 KASAYSAYAN AT PINAGMULAN
               </button>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-4">
+            <motion.div variants={itemVariants} className="flex gap-4">
               <div>
                 <img src="/images/menus/book.png" width={50} alt="paper-writing" />
               </div>
               <button className="btn-navigator">
                 WIKA AT PANITIKAN
               </button>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-4">
+            <motion.div variants={itemVariants} className="flex gap-4">
               <div>
                 <img src="/images/menus/paint.png" width={50} alt="paper-writing" />
               </div>
               <button className="btn-navigator">
                 SINING AT TRADISYON
               </button>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-4">
+            <motion.div variants={itemVariants} className="flex gap-4">
               <div>
                 <img src="/images/menus/lady.png" width={50} alt="paper-writing" />
               </div>
               <button className="btn-navigator">
                 PAMUMUHAY AT PANINIWALA
               </button>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-4">
+            <motion.div variants={itemVariants} className="flex gap-4">
               <div>
                 <img src="/images/menus/plate.png" width={50} alt="paper-writing" />
               </div>
               <button className="btn-navigator">
                 PAGKAIN AT LUTUIN
               </button>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-4">
+            <motion.div variants={itemVariants} className="flex gap-4">
               <div className="">
                 <img src="/images/menus/curtain.png" width={50} alt="paper-writing" />
               </div>
               <button className="btn-navigator">
                 PAGDIRIWANG AT PISTA
               </button>
-            </div>
-          </div>
+            </motion.div>
+
+          </motion.div>
         </div>
 
-        {/* <VintagePaper>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
-            {features.map((f, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-              >
-                <Card className="bg-amber-50/60 border-stone-400/40 h-full flex flex-col">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-stone-400 bg-amber-200/70 shadow">
-                        <f.icon className="h-5 w-5" />
-                      </span>
-                      <CardTitle className="text-lg font-serif text-stone-800">
-                        {f.title}
-                      </CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex flex-col flex-1 justify-between">
-                    <p className="text-stone-700 mb-4 leading-relaxed text-sm">
-                      {f.desc}
-                    </p>
-                    <Button variant="outline" asChild className="self-start border-stone-400/60 bg-amber-100 hover:bg-amber-200">
-                      <a href={f.href} className="flex items-center gap-2">
-                        Tingnan <ArrowRight className="h-4 w-4" />
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </VintagePaper> */}
-
         {/* <Footer /> */}
-        
+
       </div>
 
-      <div className="absolute bottom-0" style={{
+
+      <div className="absolute bottom-0 z-10" style={{
         backgroundImage: 'url(/images/leaves-left.png)',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'center',
-        height: '600px',
-        width: '400px',
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: "center",
+        height: '500px',
+        width: '370px',
       }}>
-        
       </div>
+      <div className="mx-auto z-0" style={{
+        backgroundImage: 'url(/images/book-opened.png)',
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: "center",
+        height: '220px',
+        width: '600px',
+      }}>
+      </div>
+
+      <div className="absolute bottom-0 right-0" style={{
+        backgroundImage: 'url(/images/book-pile.png)',
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        height: '400px',
+        width: '170px',
+      }}></div>
+
     </div>
   );
 }

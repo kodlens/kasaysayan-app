@@ -134,6 +134,7 @@ p {
   border-radius: 10px;
   font-weight: bold;
   width: 300px;
+  transition: .1s ease-in;
 }
 
 .btn-navigator:hover {
