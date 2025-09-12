@@ -23,10 +23,10 @@ const itemVariants: Variants = {
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-dvh bg-gradient-to-br from-[#f1e6c8] via-[#e6d7b1] to-[#d9c79a] text-stone-900 overflow-hidden">
+    <div className="relative min-h-dvh bg-gradient-to-br from-[#f1e6c8] via-[#e6d7b1] to-[#d9c79a] text-stone-900">
 
       {/* Main Content with Nostalgic Border */}
-      <div className="max-w-5xl mx-auto mt-10 px-4 sm:px-6 py-10 sm:py-14 border-8 border-[#d2b48c] rounded-2xl shadow-2xl bg-[#fffaf0]">
+      <div className="relative z-10 max-w-5xl mx-auto mt-10 px-4 sm:px-6 py-10 sm:py-14 border-8 border-[#d2b48c] rounded-2xl shadow-2xl bg-[#fffaf0]">
 
         {/* Header */}
         <motion.header
@@ -48,7 +48,7 @@ export default function HomePage() {
 
         {/* Menu Buttons */}
         <motion.div
-          className="flex flex-col gap-4 items-start sm:items-center"
+          className="flex flex-col gap-4 items-start sm:items-center z-10"
           variants={containerVariants}
           initial="hidden"
           animate="show"
@@ -103,10 +103,14 @@ export default function HomePage() {
         </motion.div>
       </div>
 
+      <div className="relative h-[180px] ">
+        <div className="absolute leaves pointer-events-none"></div>
+        <div className="absolute bottom-0 book pointer-events-none z-0"></div>
+        <div className="absolute right-0 book-pile pointer-events-none"></div>
+      </div>
+
       {/* Decorative elements (optional) */}
-      <div className="absolute bottom-0 z-10 leaves pointer-events-none"></div>
-      <div className="book pointer-events-none"></div>
-      <div className="absolute bottom-0 right-0 book-pile pointer-events-none"></div>
+      
     </div>
   );
-}
+}``
