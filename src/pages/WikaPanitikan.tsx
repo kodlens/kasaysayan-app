@@ -2,7 +2,7 @@ import Subtitle from "@/components/Subtitle"
 import Title from "@/components/Title";
 import { motion, type Variants } from "framer-motion";
 
-const KasaysayanPinagmulan = () => {
+const WikaPanitikan = () => {
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -24,7 +24,7 @@ const KasaysayanPinagmulan = () => {
     <div className="max-w-5xl mx-auto mt-10">
 
       <motion.div>
-        <Title title="Bayan ng Cavinti" />
+        <Title title="Alamat ng Cavinti" />
       </motion.div>
 
       <motion.div
@@ -33,7 +33,7 @@ const KasaysayanPinagmulan = () => {
         animate="show">
 
         <motion.div variants={itemVariants}>
-          <Subtitle subtitle="Kahirapan sa Kamay ng mga Kastila" />
+          <Subtitle subtitle="Alamat ng Cavinti" />
           <div className="mb-4">
             <img src="/images/map.png" className="float-right h-[300px] ml-4" alt="map" />
             <p className="">
@@ -92,4 +92,4 @@ const KasaysayanPinagmulan = () => {
   )
 }
 
-export default KasaysayanPinagmulan
+export default WikaPanitikan

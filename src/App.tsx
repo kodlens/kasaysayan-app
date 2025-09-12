@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
-import KasaysayanPage from "./pages/KasaysayanPage";
-import SimbahanPage from "./pages/SimbahanPage";
+import KasaysayanPinagmulan from "./pages/KasaysayanPinagmulan";
+import WikaPanitikan from "./pages/WikaPanitikan";
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/kasaysayan" element={<KasaysayanPage />} />
-      <Route path="/simbahan" element={<SimbahanPage />} />
+      <Route path="/kasaysayan-pinagmulan" element={<KasaysayanPinagmulan />} />
+      <Route path="/wika-panitikan" element={<WikaPanitikan />} />
       {/* <Route path="/timeline" element={<TimelinePage />} /> */}
     </Routes>
   );

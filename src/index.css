@@ -118,12 +118,14 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    /* @apply bg-background text-foreground; */
+    @apply bg-[linear-gradient(135deg,#f1e6c8_0%,#e6d7b1_50%,#d9c79a_100%)]
   }
 }
 
 p {
   text-align: justify;
+  margin: 10px 0;
 }
 
 
