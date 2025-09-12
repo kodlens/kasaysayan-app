@@ -20,7 +20,8 @@ const WikaPanitikan = () => {
 
 
   return (
-    <div className="min-h-dvh max-w-5xl mx-4 md:mx-auto mt-10">
+    <div className="min-h-dvh max-w-5xl mx-4 md:mx-auto mt-10 border-8 border-[#d2b48c] rounded-xl shadow-2xl 
+      bg-[#fffaf0] p-6">
 
       <motion.div>
         <Title title="Alamat ng Cavinti" />

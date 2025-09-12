@@ -20,7 +20,8 @@ const SiningTradisyon = () => {
 
 
     return (
-        <div className="min-h-dvh max-w-5xl mx-4 md:mx-auto mt-10">
+        <div className="min-h-dvh max-w-5xl mx-4 md:mx-auto mt-10 border-8 border-[#d2b48c] rounded-xl shadow-2xl 
+      bg-[#fffaf0] p-6">
 
             <motion.div>
                 <Title title="Ang Sining ng Cavinti: Pamanang Yari sa Kamay at Kultura" />
@@ -110,7 +111,7 @@ const SiningTradisyon = () => {
                      <p>
                         Kilala rin ang Cavinti bilang tahanan ng pinakamalaking sambalilo sa buong mundo. Ito ay gawa sa hinabing dahon ng pandan. Naitala ito sa Guinness Book of World Records noong Agosto 2016.
                     </p> 
-                    <div className="flex gap-2 md:flex-row flex-col">
+                    <div className="flex gap-2 md:flex-row flex-col justify-center items-center">
                         <img src="/images/sining-tradisyon-9.png" width={400} alt="picture 9" />
                         <img src="/images/sining-tradisyon-10.png" width={400} alt="picture 10" />
                     </div>
