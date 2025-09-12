@@ -23,7 +23,7 @@ export default function HomePage() {
     <>
 
       {/* <div className="relative min-h-dvh bg-[linear-gradient(135deg,#f1e6c8_0%,#e6d7b1_50%,#d9c79a_100%)] text-stone-900"> */}
-      <div className="relative min-h-dvh text-stone-900  ">
+      <div className="relative min-h-dvh">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14 z-10">
           <motion.header
             initial={{ opacity: 0, y: -8 }}
@@ -70,9 +70,9 @@ export default function HomePage() {
                 <div>
                   <img src="/images/menus/paint.png" width={50} alt="paper-writing" />
                 </div>
-                <button className="btn-navigator">
+                <Link to={'/sining-tradisyon'} className="btn-navigator">
                   SINING AT TRADISYON
-                </button>
+                </Link>
               </motion.div>
 
               <motion.div variants={itemVariants} className="flex gap-4">

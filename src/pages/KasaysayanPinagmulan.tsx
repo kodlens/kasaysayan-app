@@ -21,7 +21,7 @@ const KasaysayanPinagmulan = () => {
 
 
   return (
-    <div className="max-w-5xl mx-auto mt-10">
+    <div className="max-w-5xl mx-4 md:mx-auto mt-10">
 
       <motion.div>
         <Title title="Bayan ng Cavinti" />
@@ -35,7 +35,7 @@ const KasaysayanPinagmulan = () => {
         <motion.div variants={itemVariants}>
           <Subtitle subtitle="Kahirapan sa Kamay ng mga Kastila" />
           <div className="mb-4">
-            <img src="/images/map.png" className="float-right h-[300px] ml-4" alt="map" />
+            <img src="/images/map.png" className="md:float-right h-[300px] md:ml-4" alt="map" />
             <p className="">
               Nagdulot ng ibayong paghihirap sa mga
               taga- Cavinti ang pananakop ng mga Kastila.
