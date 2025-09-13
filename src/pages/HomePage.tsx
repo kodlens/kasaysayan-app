@@ -23,7 +23,7 @@ const itemVariants: Variants = {
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-dvh bg-gradient-to-br from-[#f1e6c8] via-[#e6d7b1] to-[#d9c79a] text-stone-900">
+    <div className="relative min-h-dvh bg-gradient-to-br from-[#f1e6c8] via-[#e6d7b1] to-[#d9c79a] text-stone-900 overflow-hidden">
 
       {/* Main Content with Nostalgic Border */}
       <div className="relative z-10 max-w-5xl mx-auto mt-10 px-4 sm:px-6 py-10 sm:py-14 border-8 border-[#d2b48c] rounded-2xl shadow-2xl bg-[#fffaf0]">
